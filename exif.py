@@ -3,7 +3,7 @@ import os
 #exif remove dir list
 print("Initiating exif data removing sequence...\n")
 relevant_path = os.getcwd()
-extenstions = ['jpg', 'png' ,'jpeg']
+extenstions = ['jpg','jpeg']
 listfiles = [files for files in os.listdir(relevant_path) if any(files.endswith(ext) for ext in extenstions)]
 #inbuilt function
 #content = filter(lambda x: not x.startswith('ex_'), listfiles)
@@ -37,4 +37,3 @@ for image_file in newlist:
     image_without_exif.save(directory + "/ex_" + image_file)
     print("(Removed) Saved as .\ex_" + image_file)
     delete = os.remove(image_file)
-x = input("Press any key to exit...")
